@@ -1,26 +1,62 @@
 (function () {
   const nav = document.getElementById("nav");
   const toggle = document.getElementById("nav-toggle");
+  const scrim = document.getElementById("nav-scrim");
   const links = document.querySelectorAll(".nav__link");
   const yearEl = document.getElementById("year");
 
   if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
+  const mqMobile = window.matchMedia("(max-width: 720px)");
+
+  function syncNavHidden() {
+    if (!nav) return;
+    if (!mqMobile.matches) {
+      nav.removeAttribute("aria-hidden");
+      return;
+    }
+    nav.setAttribute("aria-hidden", nav.classList.contains("nav--open") ? "false" : "true");
+  }
+
+  function setMenuOpen(open) {
+    if (!nav || !toggle) return;
+    nav.classList.toggle("nav--open", open);
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+    toggle.setAttribute("aria-label", open ? "Cerrar menú de navegación" : "Abrir menú de navegación");
+    document.body.classList.toggle("menu-open", open);
+    if (scrim) {
+      scrim.setAttribute("aria-hidden", open ? "false" : "true");
+    }
+    syncNavHidden();
+  }
+
   function closeMenu() {
-    nav?.classList.remove("nav--open");
-    toggle?.setAttribute("aria-expanded", "false");
-    document.body.classList.remove("menu-open");
+    setMenuOpen(false);
   }
 
   toggle?.addEventListener("click", () => {
-    const open = nav?.classList.toggle("nav--open");
-    toggle.setAttribute("aria-expanded", open ? "true" : "false");
-    document.body.classList.toggle("menu-open", !!open);
+    const open = !nav?.classList.contains("nav--open");
+    setMenuOpen(open);
+  });
+
+  scrim?.addEventListener("click", closeMenu);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && nav?.classList.contains("nav--open")) {
+      closeMenu();
+      toggle?.focus();
+    }
   });
 
   links.forEach((a) => {
     a.addEventListener("click", closeMenu);
   });
+
+  mqMobile.addEventListener("change", () => {
+    if (!mqMobile.matches) closeMenu();
+    syncNavHidden();
+  });
+  syncNavHidden();
 
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   if (!reduceMotion.matches) {
