@@ -1,6 +1,7 @@
 /**
  * Portafolio — añade o edita entradas aquí.
  * category: "destacado" | "actual" | "freelance" | "web" | "app"
+ * freelance: usa spotlight: true para tarjetas anchas (trabajo reciente); omitir o false para apoyo continuo.
  */
 window.PORTFOLIO_DATA = {
   meta: {
@@ -16,7 +17,7 @@ window.PORTFOLIO_DATA = {
   highlights: [
     "Full Stack con fuerte enfoque en React Native y ecosistema JavaScript/TypeScript.",
     "Actualmente en Rankmi: refactor y evolución de apps nativas y plataforma de mensajería interna.",
-    "Freelance con Ativar: nuevos módulos, mantenimiento y productos web y móviles.",
+    "Freelance: Beter (IA y gemelo profesional), dashboards WispKonet y TopInvestment, y apoyo continuo a Ativar.",
   ],
   projects: [
     {
@@ -56,6 +57,42 @@ window.PORTFOLIO_DATA = {
         { label: "iOS", url: "https://apps.apple.com/mx/app/chatmi/id6639618006" },
         { label: "Android", url: "https://play.google.com/store/apps/details?id=com.rankmi.chat&hl=es" },
       ],
+    },
+    {
+      category: "freelance",
+      spotlight: true,
+      name: "Beter (Beyond the Reset)",
+      role: "Freelance — plataforma legal · mejoras recientes",
+      description:
+        "Evolución de la plataforma y las apps móviles: fortalecí el módulo de IA, incorporé el módulo de Gemelo profesional (el abogado sube su información y moldea su gemelo; con IA, ante solicitudes de clientes el gemelo atiende u orienta cuando el profesional no está en línea) y apliqué mejoras visuales y de rendimiento en conjunto.",
+      stack: ["IA", "React Native", "Web", "Legal tech"],
+      links: [
+        { label: "Web", url: "https://beyondthereset.com/" },
+        { label: "iOS", url: "https://apps.apple.com/us/app/beter/id1612101602" },
+        { label: "Android", url: "https://play.google.com/store/apps/details?id=com.avalerroux.app" },
+      ],
+    },
+    {
+      category: "freelance",
+      spotlight: true,
+      name: "WispKonet — dashboard ISP",
+      role: "Freelance · panel interno",
+      description:
+        "Dashboard para operación de un proveedor de internet: visibilidad de clientes, servicios y tareas del día a día desde un solo panel.",
+      stack: ["Dashboard", "Web", "ISP"],
+      links: [{ label: "Demo / panel", url: "https://wispkonet-ff90730841dc.herokuapp.com/" }],
+    },
+    {
+      category: "freelance",
+      spotlight: true,
+      name: "TopInvestment — CRM inmobiliario",
+      role: "Freelance · lotes y propiedades en Yucatán",
+      description:
+        "CRM orientado a la venta de lotes y propiedades en Yucatán: seguimiento de leads, inventario y flujo comercial. Desarrollé también apps Android e iOS asociadas al producto.",
+      stack: ["CRM", "Web", "React Native"],
+      links: [{ label: "Demo CRM", url: "https://topinvestments-3907f58ff983.herokuapp.com/" }],
+      footnote:
+        "Las aplicaciones móviles existen en entornos de prueba; aún no están publicadas en Google Play ni App Store.",
     },
     {
       category: "freelance",
