@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Luis Eduardo Negrón Chan — Desarrollador Full Stack y mobile. React Native, web y productos digitales en México."
+    />
+    <title>Luis Eduardo Negrón · Portafolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#contenido">Ir al contenido</a>
+
+    <header class="header">
+      <div class="header__inner">
+        <a class="logo" href="#">Luis Eduardo<span>.</span></a>
+        <button
+          type="button"
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-expanded="false"
+          aria-controls="nav"
+        >
+          Menú
+        </button>
+        <nav class="nav" id="nav" aria-label="Principal">
+          <ul class="nav__list">
+            <li><a class="nav__link" href="#sobre-mi">Sobre mí</a></li>
+            <li><a class="nav__link" href="#proyectos">Proyectos</a></li>
+            <li><a class="nav__link" href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenido">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="wrap">
+          <p class="hero__label">Portafolio profesional</p>
+          <h1 class="hero__title" id="hero-title">Luis Eduardo Negrón Chan</h1>
+          <p class="hero__tagline" id="hero-tagline">Desarrollador Full Stack · Mobile-first</p>
+          <p class="hero__lead" id="hero-lead">
+            Construyo productos digitales con React Native, JavaScript/TypeScript y backends
+            modernos. Experiencia en apps corporativas, comercio y delivery, y sitios web a
+            medida.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#proyectos">Ver proyectos</a>
+            <a class="btn btn--ghost" href="#contacto">Contactar</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about" id="sobre-mi" aria-labelledby="about-title">
+        <div class="wrap">
+          <header class="section__head" data-reveal>
+            <h2 class="section__title" id="about-title">Sobre mí</h2>
+            <p class="section__subtitle">
+              Soy <strong>Luis Eduardo Negrón Chan</strong>, desarrollador full stack con base en
+              Mérida, Yucatán. Me apasiona llevar ideas a producción con código claro, rendimiento
+              y una experiencia de usuario cuidada.
+            </p>
+          </header>
+
+          <div class="about__grid">
+            <div class="about__text" data-reveal>
+              <p>
+                Tengo trayectoria en <strong>React Native</strong> para Android e iOS, integración
+                con APIs y publicación en tiendas. También trabajo en front web (React, Next.js) y
+                en entornos <strong>Node.js</strong> con bases como MongoDB y MySQL.
+              </p>
+              <p>
+                Actualmente formo parte del equipo mobile de
+                <a href="https://www.rankmi.com/es/" target="_blank" rel="noopener noreferrer"
+                  >Rankmi</a
+                >, donde participé en la <strong>refactorización</strong> de la app principal y en
+                el desarrollo de <strong>ChatMi</strong>, la mensajería interna para colaboradores.
+              </p>
+              <p>
+                En paralelo doy soporte como <strong>freelance</strong> a
+                <a href="https://www.ativar.com.mx/es" target="_blank" rel="noopener noreferrer"
+                  >Ativar Software</a
+                >
+                en módulos nuevos, mantenimiento y productos web y móviles.
+              </p>
+              <p>
+                Fuera del horario laboral desarrollé <strong>MuniGo</strong> desde cero: app de
+                <strong>delivery y servicios locales</strong> en Yucatán, con versiones
+                <strong>Android e iOS</strong> y presencia web — un reto completo de producto,
+                backend y tiendas.
+              </p>
+            </div>
+
+            <aside class="skills" data-reveal aria-label="Stack y herramientas">
+              <h3 class="skills__title">Stack principal</h3>
+              <div class="skills__tags">
+                <span class="skill-pill">React Native</span>
+                <span class="skill-pill">TypeScript</span>
+                <span class="skill-pill">React / Next.js</span>
+                <span class="skill-pill">Node.js</span>
+                <span class="skill-pill">MongoDB</span>
+                <span class="skill-pill">MySQL</span>
+                <span class="skill-pill">Git</span>
+                <span class="skill-pill">Firebase</span>
+                <span class="skill-pill">AWS / GCP</span>
+              </div>
+            </aside>
+          </div>
+
+          <div class="timeline" data-reveal>
+            <h3 class="timeline__title">Formación</h3>
+            <ul class="timeline__list">
+              <li class="timeline__item">
+                <strong>Lic. en Ingeniería en Tecnologías de la Información</strong>
+                <span>Universidad Tecnológica Regional del Sur · 2017 – 2021</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="proyectos" aria-labelledby="projects-title">
+        <div class="wrap">
+          <header class="section__head" data-reveal>
+            <h2 class="section__title" id="projects-title">Proyectos y colaboraciones</h2>
+            <p class="section__subtitle">
+              Selección de productos en los que he participado. Para añadir más, edita el archivo
+              <code style="color: var(--accent); font-size: 0.9em">data/projects.js</code> y vuelve
+              a desplegar en GitHub Pages.
+            </p>
+          </header>
+          <div id="projects-grid"></div>
+        </div>
+      </section>
+
+      <section class="section contact" id="contacto" aria-labelledby="contact-title">
+        <div class="wrap">
+          <header class="section__head" data-reveal>
+            <h2 class="section__title" id="contact-title">Contacto</h2>
+            <p class="section__subtitle">
+              Si quieres conversar sobre un proyecto, una posición mobile o full stack, escríbeme.
+            </p>
+          </header>
+          <div class="contact__box" data-reveal>
+            <p style="margin: 0; color: var(--text-muted)">
+              Mérida, Yucatán, México · Español nativo · Inglés intermedio
+            </p>
+            <div class="contact__links">
+              <a href="mailto:eduardo-negron@live.com">eduardo-negron@live.com</a>
+              <a href="tel:+529971210804">+52 997 121 0804</a>
+              <a href="https://github.com/Eduardo-Nc" target="_blank" rel="noopener noreferrer"
+                >GitHub · Eduardo-Nc</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap">
+        <p>© <span id="year"></span> Luis Eduardo Negrón Chan. Portafolio estático para GitHub Pages.</p>
+      </div>
+    </footer>
+
+    <script src="data/projects.js"></script>
+    <script src="js/render-projects.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+      (function () {
+        var m = window.PORTFOLIO_DATA && window.PORTFOLIO_DATA.meta;
+        if (!m) return;
+        if (m.name) {
+          var t = document.getElementById("hero-title");
+          if (t) t.textContent = m.name;
+          document.title = m.name + " · Portafolio";
+        }
+        var tag = document.getElementById("hero-tagline");
+        if (tag && m.title) tag.textContent = m.title;
+      })();
+    </script>
+  </body>
+</html>
