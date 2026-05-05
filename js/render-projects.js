@@ -92,6 +92,14 @@
     h.textContent = labels[cat] || cat;
     section.appendChild(h);
 
+    const introText = data.groupIntros && data.groupIntros[cat];
+    if (introText && cat !== "freelance") {
+      const intro = document.createElement("p");
+      intro.className = "project-group__intro";
+      intro.textContent = introText;
+      section.appendChild(intro);
+    }
+
     if (cat === "freelance") {
       const intro = document.createElement("p");
       intro.className = "freelance-intro";

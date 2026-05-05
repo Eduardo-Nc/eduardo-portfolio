@@ -561,7 +561,8 @@ body.menu-open .nav-scrim {
   margin: 0 0 1rem;
 }
 
-.freelance-intro {
+.freelance-intro,
+.project-group__intro {
   margin: 0 0 1.75rem;
   max-width: 62ch;
   font-size: 0.9375rem;

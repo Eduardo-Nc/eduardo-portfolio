@@ -19,6 +19,11 @@ window.PORTFOLIO_DATA = {
     "Actualmente en Rankmi: refactor y evolución de apps nativas y plataforma de mensajería interna.",
     "Freelance: Beter (IA y gemelo profesional), dashboards WispKonet y TopInvestment, y apoyo continuo a Ativar.",
   ],
+  /** Texto opcional bajo el título de cada grupo de proyectos (clave = category) */
+  groupIntros: {
+    actual:
+      "Rankmi es una plataforma de gestión de personas y RR. HH. cuyo lema es «Personas + IA». En el equipo se nos ha fomentado integrar la inteligencia artificial en el día a día —por ejemplo con asistentes como Cursor— para optimizar tiempos de desarrollo, pruebas e investigación, sin sustituir el criterio del equipo.",
+  },
   projects: [
     {
       category: "destacado",
