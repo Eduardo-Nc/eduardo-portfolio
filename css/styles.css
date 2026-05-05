@@ -452,6 +452,36 @@ body.menu-open .nav-scrim {
   max-width: 56ch;
 }
 
+/* CV (Drive) */
+.cv-section {
+  border-top: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+
+.cv__box {
+  max-width: 520px;
+}
+
+.cv__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.cv__note {
+  margin: 1.25rem 0 0;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+  max-width: 48ch;
+}
+
+.cv__note strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
 /* About */
 .about__grid {
   display: grid;

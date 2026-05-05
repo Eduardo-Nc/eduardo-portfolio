@@ -15,7 +15,7 @@
       rel="stylesheet"
     />
     <!-- Sube ?v= (p. ej. v=3) si tras publicar no ves cambios: caché del navegador/CDN -->
-    <link rel="stylesheet" href="css/styles.css?v=4" />
+    <link rel="stylesheet" href="css/styles.css?v=5" />
   </head>
   <body>
     <a class="skip" href="#contenido">Ir al contenido</a>
@@ -38,6 +38,7 @@
       <nav class="nav" id="nav" aria-label="Principal">
         <ul class="nav__list">
           <li><a class="nav__link" href="#sobre-mi">Sobre mí</a></li>
+          <li><a class="nav__link" href="#cv">Currículum</a></li>
           <li><a class="nav__link" href="#proyectos">Proyectos</a></li>
           <li><a class="nav__link" href="#contacto">Contacto</a></li>
         </ul>
@@ -59,6 +60,7 @@
           </p>
           <div class="hero__actions">
             <a class="btn btn--primary" href="#proyectos">Ver proyectos</a>
+            <a class="btn btn--ghost" href="#cv">Currículum</a>
             <a class="btn btn--ghost" href="#contacto">Contactar</a>
           </div>
         </div>
@@ -167,6 +169,40 @@
                 >
               </li>
             </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section cv-section" id="cv" aria-labelledby="cv-title">
+        <div class="wrap">
+          <header class="section__head" data-reveal>
+            <h2 class="section__title" id="cv-title">Currículum</h2>
+            <p class="section__subtitle">
+              PDF en Google Drive: puedes verlo en el navegador o descargarlo.
+            </p>
+          </header>
+          <div class="cv__box" data-reveal>
+            <div class="cv__actions">
+              <a
+                class="btn btn--primary"
+                href="https://drive.google.com/file/d/1wI8BHBoH20A0In6OJ5SlYKFmWU4f28Is/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ver CV</a
+              >
+              <a
+                class="btn btn--ghost"
+                href="https://drive.google.com/uc?export=download&amp;id=1wI8BHBoH20A0In6OJ5SlYKFmWU4f28Is"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Descargar PDF</a
+              >
+            </div>
+            <p class="cv__note">
+              Si la descarga pide confirmación en Drive, usa “Descargar de todas
+              formas” o abre <strong>Ver CV</strong> y descarga desde el menú del
+              visor.
+            </p>
           </div>
         </div>
       </section>
